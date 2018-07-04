@@ -120,23 +120,23 @@ header nav.menu ul.add-menu li.line {
 
 /* CONTENT */
 
-.container {
+#container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 30px;
 }
-.container .home {
+#container .home {
     margin-top: 150px !important;
 }
-.container .block-1 {
+#container .block-1 {
     width: 360px;
     float: left;
     margin-right: 45px;
 }
-.container .block-1:last-child{
+#container .block-1:last-child{
     margin-right: 0px;
 }
-.container .block-1 .item {
+#container .block-1 .item {
 		display: block;
 		text-decoration: none;
     background: #fff;
@@ -146,13 +146,13 @@ header nav.menu ul.add-menu li.line {
     -moz-box-shadow: 0px 5px 15px 0px rgba(223,228,237,1);
     box-shadow: 0px 5px 15px 0px rgba(223,228,237,1);
 }
-.container .block-1 .item .block-title{
+#container .block-1 .item .block-title{
     font-weight: bold;
     font-size: 30px;
     color:#2f538a;
     margin-bottom: 10px;
 }
-.container .block-1 .item .block-info {
+#container .block-1 .item .block-info {
     color: #8291a7;
     font-size: 13px;
 }
@@ -698,7 +698,6 @@ color: rgba(0, 0, 0, 0.3);
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 50px;
-    padding-top: 20px;
 }
 .content  .block-page-title {
     text-align: center;
@@ -1595,7 +1594,7 @@ input[type=submit] {
 
 /*MEDIA */
 @media only screen and (max-width:1024px) {
-    .container {
+    #container {
     width: 960px;
     margin: 0 auto;
     }
@@ -1640,11 +1639,11 @@ input[type=submit] {
     .history-col-2 {
         width: 210px;
     }
-    .container .block-1 {
+    #container .block-1 {
     width: 300px;
     margin-right: 30px;
     }
-    .container .block-1 .item {
+    #container .block-1 .item {
     padding: 60px 20px;
     min-height: 100px;
     }
@@ -1692,7 +1691,7 @@ input[type=submit] {
     }
 }
 @media only screen and (max-width:768px) {
-    .container .home {
+    #container .home {
         margin-top: 30px !important;
     }
     .block-right-col {
@@ -1763,7 +1762,7 @@ input[type=submit] {
     .form-col {
     width: 334px;
     }
-    .container {
+    #container {
         width: 728px;
         padding-left: 20px;
         padding-right: 20px;
@@ -1784,12 +1783,12 @@ input[type=submit] {
     .content {
         margin-top: 30px !important;
     }
-    .container .block-1 {
+    #container .block-1 {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
     }
-    .container .block-1 .item {
+    #container .block-1 .item {
         padding: 40px 20px;
         min-height: 100px;
     }
@@ -2048,7 +2047,7 @@ input[type=submit] {
         background: #fff;
         border-bottom: 1px solid #e6e8ed;
     }
-    .container {
+    #container {
         width: 280px;
         padding-left: 20px;
         padding-right: 20px;
