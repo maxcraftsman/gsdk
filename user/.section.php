@@ -1,6 +1,5 @@
 <?
-$sSectionName = "Авторизация";
 $arDirProperties = Array(
-
+   "TITLE" => "Личный кабинет"
 );
 ?>
