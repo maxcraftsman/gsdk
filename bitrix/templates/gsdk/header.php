@@ -59,7 +59,7 @@ die();
 				);?>
 			</ul>
 			<ul class="add-menu">
-				<li><a href="#"><span class="icon-person"></span>Личный кабинет</a></li>
+				<li><a href="/user"><span class="icon-person"></span>Личный кабинет</a></li>
 				<li class="line"><a href="#"><span class="icon-card"></span>В корзине 0 товаров</a></li>
 			</ul>
 		</nav>
