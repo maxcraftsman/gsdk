@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Контакты");
+$APPLICATION->SetTitle("О нас");
 $title = htmlspecialcharsex($arResult[$index]["TITLE"]);
 ?>
 <div class="content">

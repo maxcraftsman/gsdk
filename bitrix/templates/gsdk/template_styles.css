@@ -16,6 +16,9 @@ html {
   background: #eff1f5;
   font-family: 'Roboto', Arial, sans-serif;
 }
+body {
+  background: none !important;
+}
 .news-item {
   display: flex;
   margin-top: 20px;
@@ -80,6 +83,16 @@ div.news-detail img.detail_picture {
   color:#2f538a;
   font-weight: 500;
   font-size: 18px;
+}
+.bx-system-auth-form input {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+.bx-system-auth-form label {
+  padding-bottom: 10px;
+}
+div.bx-system-auth-form span.bx-auth-secure {
+  vertical-align: inherit;
 }
 .image-sock {
   -webkit-flex: 0 0 240px;
@@ -239,11 +252,109 @@ header nav.menu ul.add-menu li.line {
   color: #8291a7;
   font-size: 13px;
 }
+.basket-item-amount-filed, .basket-item-block-amount.disabled .basket-item-amount-filed:hover {
+  height: 32px;
+  width: 32px;
+  color: #8291a7;
+  font-family: Roboto !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+#basket-root {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(223,228,237,1);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(223,228,237,1);
+  box-shadow: 0px 5px 15px 0px rgba(223,228,237,1);
+}
+.basket-checkout-container {
+  margin: 0px;
+  border: 0px;
+}
+.basket-item-block-image {
+  border: 1px solid #e5e8ef;
+  padding: 10px;
+  max-width: 100px;
+  margin-right: 10px;
+}
+.basket-items-list-table td:first-child{
+  padding-left: 30px;
+}
+.basket-items-list-item-descriptions {
+  padding: 10px 0;
+}
+.basket-items-list-table td:last-child{
+  padding-right: 30px;
+}
+.basket-items-list-item-descriptions-inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.basket-items-list-item-container>td {
+  vertical-align: middle;
+  padding-top: 0px !important;
+  padding: 0 10px;
+}
+.basket-item-block-actions {
+  opacity: 1;
+}
+.basket-item-info-name, .basket-item-info-name-link {
+  font-size: 18px;
+  color: #2f538a;
+  line-height: 20px;
+}
+.basket-item-price-title {
+  display: none;
+}
+.basket-item-block-price {
+  padding-top: 0px;
+}
+.basket-item-property-value, .basket-item-property-custom-value {
+  display: block;
+  color: #8291a7;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.basket-item-property-custom-name {
+  display: none;
+}
+.basket-item-amount-btn-plus, .basket-item-amount-btn-minus {
+  border: 1px solid #e5e8ef;
+  height: 32px;
+  width: 32px;
+  color: #8291a7;
+  font-family: Roboto !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+.basket-items-list {
+  padding: 0px;
+}
+.basket-item-amount-field-description {
+  display: none;
+}
+.basket-item-amount-btn-minus {
+  border-right: 0px;
+}
+.basket-item-amount-btn-plus {
+
+  border-left: 0px;
+}
+.basket-items-list-wrapper, .basket-items-list-wrapper-compact {
+  margin-bottom: 0px;
+  background-color: white;
+  border: 0px;
+}
+.basket-item-price-current-text {
+  font-family: Roboto !important;
+  font-size: 16px !important;
+  color: #2f538a !important;
+}
 .breadcrumb {
   margin-top: 20px;
   margin-bottom: 20px;
   color:#8291a7;
   font-size: 13px;
+  background: none !important;
 }
 .breadcrumb a{
   color:#8291a7;
@@ -1351,6 +1462,10 @@ input[type=submit] {
   width: 100%;
 
 }
+header nav.menu ul.add-menu li a:hover {
+  color: #2f538a;
+  text-decoration: underline;
+}
 .block-form .input-text {
   border: 1px solid #e5e8ef;
   padding: 20px;
@@ -1360,7 +1475,7 @@ input[type=submit] {
   text-align: center;
   padding: 20px;
 }
-.block-form .input-submit .form-submit{
+.form-submit{
   padding: 15px 40px;
   font-size: 20px;
   font-weight: lighter;

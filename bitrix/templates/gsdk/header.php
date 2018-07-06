@@ -9,7 +9,7 @@ die();
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?$APPLICATION->ShowHead();?>
-	<title><?$APPLICATION->ShowTitle();?></title>
+	<title><?$APPLICATION->ShowTitle(false)?></title>
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -59,26 +59,38 @@ die();
 				);?>
 			</ul>
 			<ul class="add-menu">
-				<li><a href="/user"><span class="icon-person"></span>Личный кабинет</a></li>
-				<li class="line"><a href="#"><span class="icon-card"></span>В корзине 0 товаров</a></li>
-			</ul>
-		</nav>
-		<div class="menu-button">
-			<a href="#" class="nav-toggle"><span class="fa fa-bars"></span></a>
-		</div>
-	</div>
-
-	<nav class="menu-mobile" role="navigation">
-		<ul class="add-menu">
-			<li class="line"><a href="#"><span class="icon-card"></span>В корзине 0 товаров</a></li>
-			<li><a href="#"><span class="icon-person"></span>Личный кабинет</a></li>
-		</ul>
-		<ul>
-			<li><a href="#">О нас</a></li>
-			<li><a href="#">Контакты</a></li>
-			<li><a href="#">Акции</a></li>
+				<?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "login_basket", Array(
+					"PATH_TO_BASKET" => SITE_DIR."personal/cart/",	// Страница корзины
+					"PATH_TO_PERSONAL" => SITE_DIR."personal/",	// Страница персонального раздела
+					"SHOW_PERSONAL_LINK" => "N",	// Отображать персональный раздел
+					"SHOW_NUM_PRODUCTS" => "Y",	// Показывать количество товаров
+					"SHOW_TOTAL_PRICE" => "Y",	// Показывать общую сумму по товарам
+					"SHOW_PRODUCTS" => "N",	// Показывать список товаров
+					"POSITION_FIXED" => "N",	// Отображать корзину поверх шаблона
+					"SHOW_AUTHOR" => "Y",	// Добавить возможность авторизации
+					"PATH_TO_REGISTER" => SITE_DIR."login/",	// Страница регистрации
+					"PATH_TO_PROFILE" => SITE_DIR."personal/",	// Страница профиля
+				),
+				false
+			);?>
 		</ul>
 	</nav>
+	<div class="menu-button">
+		<a href="#" class="nav-toggle"><span class="fa fa-bars"></span></a>
+	</div>
+</div>
+
+<nav class="menu-mobile" role="navigation">
+	<ul class="add-menu">
+		<li class="line"><a href="#"><span class="icon-card"></span>В корзине 0 товаров</a></li>
+		<li><a href="#"><span class="icon-person"></span>Личный кабинет</a></li>
+	</ul>
+	<ul>
+		<li><a href="#">О нас</a></li>
+		<li><a href="#">Контакты</a></li>
+		<li><a href="#">Акции</a></li>
+	</ul>
+</nav>
 </header>
 <?if($APPLICATION->GetCurPage(false) !== '/'){?>
 	<?$APPLICATION->IncludeComponent(

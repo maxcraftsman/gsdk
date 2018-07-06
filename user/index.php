@@ -3,12 +3,12 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Авторизация");
 ?>
 <?
-global $USER;
-if ($USER->IsAuthorized()==false){ LocalRedirect('/login');}
+	global $USER;
+	if ($USER->IsAuthorized()==false){ LocalRedirect('/login');}
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.personal.section", 
-	".default", 
+	"bitrix:sale.personal.section",
+	".default",
 	array(
 		"ACCOUNT_PAYMENT_ELIMINATED_PAY_SYSTEMS" => array(
 			0 => "0",
@@ -50,10 +50,10 @@ if ($USER->IsAuthorized()==false){ LocalRedirect('/login');}
 		"ORDER_RESTRICT_CHANGE_PAYSYSTEM" => array(
 			0 => "0",
 		),
-		"PATH_TO_BASKET" => "/personal/cart/",
+		"PATH_TO_BASKET" => "/user/cart/",
 		"PATH_TO_CATALOG" => "/catalog/",
 		"PATH_TO_CONTACT" => "/about/contacts/",
-		"PATH_TO_PAYMENT" => "/personal/order/payment/",
+		"PATH_TO_PAYMENT" => "/user/order/payment/",
 		"PROFILES_PER_PAGE" => "20",
 		"SAVE_IN_SESSION" => "Y",
 		"SEF_FOLDER" => "/user/",
