@@ -1,10 +1,16 @@
 <?
 define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("TITLE", "Моя корзина");
 $APPLICATION->SetTitle("Корзина");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket",
-	"",
+?>
+<div class="content">
+	<div class="page-title">
+		<?$APPLICATION->ShowTitle()?>
+	</div>
+	<?$APPLICATION->IncludeComponent(
+	"bitrix:sale.basket.basket", 
+	"gsdk-cart", 
 	array(
 		"COUNT_DISCOUNT_4_ALL_QUANTITY" => "N",
 		"COLUMNS_LIST" => array(
@@ -22,18 +28,15 @@ $APPLICATION->SetTitle("Корзина");
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"PATH_TO_ORDER" => "/user/order/make/",
-		"HIDE_COUPON" => "N",
+		"HIDE_COUPON" => "Y",
 		"QUANTITY_FLOAT" => "N",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"TEMPLATE_THEME" => "site",
 		"SET_TITLE" => "Y",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"OFFERS_PROPS" => array(
-			0 => "COLOR_REF",
-			1 => "SIZES_SHOES",
-			2 => "SIZES_CLOTHES",
 		),
-		"COMPONENT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => "gsdk-cart",
 		"DEFERRED_REFRESH" => "N",
 		"USE_DYNAMIC_SCROLL" => "N",
 		"SHOW_FILTER" => "N",
@@ -57,7 +60,7 @@ $APPLICATION->SetTitle("Корзина");
 		"TOTAL_BLOCK_DISPLAY" => array(
 			0 => "bottom",
 		),
-		"DISPLAY_MODE" => "compact",
+		"DISPLAY_MODE" => "extended",
 		"PRICE_DISPLAY_MODE" => "Y",
 		"SHOW_DISCOUNT_PERCENT" => "Y",
 		"DISCOUNT_PERCENT_POSITION" => "bottom-right",
@@ -96,7 +99,14 @@ $APPLICATION->SetTitle("Корзина");
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"ADDITIONAL_PICT_PROP_12" => "-",
 		"ADDITIONAL_PICT_PROP_13" => "-",
-		"ADDITIONAL_PICT_PROP_14" => "-"
+		"ADDITIONAL_PICT_PROP_14" => "-",
+		"ADDITIONAL_PICT_PROP_1" => "-",
+		"ADDITIONAL_PICT_PROP_65" => "-",
+		"ADDITIONAL_PICT_PROP_66" => "-",
+		"ADDITIONAL_PICT_PROP_67" => "-",
+		"ADDITIONAL_PICT_PROP_68" => "-"
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
