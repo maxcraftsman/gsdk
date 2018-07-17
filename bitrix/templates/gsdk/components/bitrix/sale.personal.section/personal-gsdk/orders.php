@@ -5,14 +5,14 @@ use Bitrix\Main\Localization\Loc;
 if ($arParams['SHOW_ORDER_PAGE'] !== 'Y')
 {
 	LocalRedirect($arParams['SEF_FOLDER']);
-}	
+}
 
 if (strlen($arParams["MAIN_CHAIN_NAME"]) > 0)
 {
 	$APPLICATION->AddChainItem(htmlspecialcharsbx($arParams["MAIN_CHAIN_NAME"]), $arResult['SEF_FOLDER']);
-}
-
-$APPLICATION->AddChainItem(Loc::getMessage("SPS_CHAIN_ORDERS"), $arResult['PATH_TO_ORDERS']);
+}?>
+<div class="block-right-content">
+<?$APPLICATION->AddChainItem(Loc::getMessage("SPS_CHAIN_ORDERS"), $arResult['PATH_TO_ORDERS']);
 $APPLICATION->IncludeComponent(
 	"bitrix:sale.personal.order.list",
 	"",
@@ -42,4 +42,4 @@ $APPLICATION->IncludeComponent(
 	$component
 );
 ?>
-
+</div>
