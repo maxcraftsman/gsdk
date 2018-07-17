@@ -20,6 +20,10 @@ html {
   background: #eff1f5;
   font-family: 'Roboto', Arial, sans-serif;
 }
+td .btn-order {
+  float: left;
+  margin-top: 20px;
+}
 #bx-soa-delivery.bx-step-completed .bx-soa-section-content {
   flex-direction: row;
 }
