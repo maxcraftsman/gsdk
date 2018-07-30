@@ -1,5 +1,8 @@
 // Path
-
+if (window.location.pathname == '/search/')
+{
+	window.history.pushState("object or string", "Title", "/search/");
+}
 // Vars
 $('#searchSteps').owlCarousel({
 	items: 1,
@@ -13,8 +16,8 @@ $('#searchSteps').owlCarousel({
 	touchDrag: false,
 	startPosition: 'URLHash',
 });
-function activeState(name){
-	return '<span>'+name+'</span><span href="#" class="chng-link">Изменить</span>';
+function activeState(name,id){
+	return '<span data-cid="'+id+'">'+name+'</span><span href="#" class="chng-link">Изменить</span>';
 }
 function clearChain(par){
 	switch (par) {
@@ -65,7 +68,7 @@ $("#searchSteps .selectDevice a").on("click", function(){
 	stepCounter($(this));
 });
 $("#searchSteps .brend-item a").on("click", function(){
-	$('.s-brend').html(activeState($(this).attr('data-name')));
+	$('.s-brend').html(activeState($(this).attr('data-name'),$(this).attr('data-id')));
 	stepCounter($(this));
 });
 var wrapper    = $("#site-wrapper"),
