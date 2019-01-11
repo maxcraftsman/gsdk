@@ -59,20 +59,28 @@ die();
 				);?>
 			</ul>
 			<ul class="add-menu">
-				<?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "login_basket", Array(
-					"PATH_TO_BASKET" => SITE_DIR."personal/cart/",	// Страница корзины
-					"PATH_TO_PERSONAL" => SITE_DIR."personal/",	// Страница персонального раздела
-					"SHOW_PERSONAL_LINK" => "N",	// Отображать персональный раздел
-					"SHOW_NUM_PRODUCTS" => "Y",	// Показывать количество товаров
-					"SHOW_TOTAL_PRICE" => "Y",	// Показывать общую сумму по товарам
-					"SHOW_PRODUCTS" => "N",	// Показывать список товаров
-					"POSITION_FIXED" => "N",	// Отображать корзину поверх шаблона
-					"SHOW_AUTHOR" => "Y",	// Добавить возможность авторизации
-					"PATH_TO_REGISTER" => SITE_DIR."login/",	// Страница регистрации
-					"PATH_TO_PROFILE" => SITE_DIR."personal/",	// Страница профиля
-				),
-				false
-			);?>
+				<?$APPLICATION->IncludeComponent(
+	"bitrix:sale.basket.basket.line",
+	"login_basket",
+	array(
+		"PATH_TO_BASKET" => SITE_DIR."user/cart/",
+		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+		"SHOW_PERSONAL_LINK" => "N",
+		"SHOW_NUM_PRODUCTS" => "Y",
+		"SHOW_TOTAL_PRICE" => "N",
+		"SHOW_PRODUCTS" => "N",
+		"POSITION_FIXED" => "N",
+		"SHOW_AUTHOR" => "Y",
+		"PATH_TO_REGISTER" => SITE_DIR."login/reg.php",
+		"PATH_TO_PROFILE" => SITE_DIR."user/",
+		"COMPONENT_TEMPLATE" => "login_basket",
+		"PATH_TO_ORDER" => SITE_DIR."user/order/make/",
+		"SHOW_EMPTY_VALUES" => "Y",
+		"PATH_TO_AUTHORIZE" => SITE_DIR."login/",
+		"HIDE_ON_BASKET_PAGES" => "Y"
+	),
+	false
+);?>
 		</ul>
 	</nav>
 	<div class="menu-button">
@@ -103,4 +111,4 @@ die();
 			)
 		);?>
 		<?}?>
-		<div class="container">
+		<div id="container" class="container">
